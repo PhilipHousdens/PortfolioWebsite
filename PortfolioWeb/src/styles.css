@@ -1,2 +1,21 @@
-@import "tailwindcss"
+@import "tailwindcss";
 
+/* === Glowing Line Sweep === */
+@keyframes glowLine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0.2;
+  }
+}
+
+.animate-glow-line {
+  animation: glowLine 2s linear infinite;
+}
