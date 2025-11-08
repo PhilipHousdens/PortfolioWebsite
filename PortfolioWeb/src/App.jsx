@@ -11,9 +11,15 @@ function App() {
   }, []);
 
   return (
-    <div className="p-10 text-center">
-      <h1 className="text-3xl font-bold mb-4">Frontend + Backend Test</h1>
-      <p>{message}</p>
+    <div >
+      <header className='mx-auto flex justify-center pt-5 text-white '>
+        <ul className='flex justify-between w-[20%] bg-white/10 py-4 px-5 rounded-4xl'>
+          <li>About Me</li>
+          <li>Skills</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      </header>
     </div>
   );
 }
