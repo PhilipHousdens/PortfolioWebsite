@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './styles.css'
+import HeroSection from './components/HeroSection.jsx';
+import AboutSection from './components/AboutSection.jsx';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -11,55 +13,28 @@ function App() {
   }, []);
 
   return (
-    <div className='h-screen bg-black overflow-hidden relative'>
+    <div className='h-screen overflow-y-scroll snap-y snap-mandatory bg-black text-white scroll-smooth'>
       {/* ===== Navigation Bar ===== */}
-      <header className='mx-auto flex justify-center pt-5 text-white'>
-        <ul className='flex justify-between w-[20%] bg-white/10 py-4 px-5 rounded-4xl'>
-          <li>About Me</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+      <header className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
+        <ul className="flex justify-between w-[25vw] bg-white/10 py-3 px-6 rounded-full backdrop-blur-md text-white shadow-lg">
+          <li><a href="#about" className="hover:text-gray-300">About Me</a></li>
+          <li><a href="#skills" className="hover:text-gray-300">Skills</a></li>
+          <li><a href="#projects" className="hover:text-gray-300">Projects</a></li>
+          <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
         </ul>
       </header>
 
       {/* ===== Hero Section ===== */}
-      <main className="relative">
-        {/* === Glowing Circle === */}
-        <div className="absolute top-[-5%] right-[-5%] w-[350px] h-[350px] rounded-full border border-white animate-pulse shadow-[0_0_100px_40px_rgba(255,255,255,0.2)] "></div>
-        <div className="absolute bottom-[-20%] left-[-5%] w-[350px] h-[350px] rounded-full border border-white animate-pulse shadow-[0_0_100px_40px_rgba(255,255,255,0.2)] "></div>
+      <section id='home' className='h-screen snap-start'>
+          <HeroSection />
+      </section>
+      
 
-        <section className='text-white flex flex-col  w-[70%] m-auto justify-center h-[70vh] relative'>
-          <h1 className='text-3xl font-bold mt-20 relative z-10'>
-            Welcome to my portfolio website. <br />
-            Here is where I store all my work
-          </h1>
-          <p className='text-9xl mt-10 relative z-10'>PHILIP HOUSDEN</p>
-
-          {/* === About Me Section with glowing line and arrow === */}
-          <div className="flex flex-col items-center space-y-2 relative z-10 mt-40">
-            <p className="text-xl text-white tracking-wide">About me</p>
-
-            {/* Glowing line */}
-            <div className="w-32 h-[2px] bg-white/50 relative overflow-hidden">
-              <div className="absolute inset-0 bg-white animate-glow-line"></div>
-            </div>
-
-            {/* Arrow animation */}
-            <div className="animate-bounce">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="white"
-                className="w-6 h-6"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
-        </section>
-      </main>
+      {/* About me section */}
+      <section id='about' className='h-screen snap-start'>
+          <AboutSection />
+      </section>
+      
     </div>
   );
 }
