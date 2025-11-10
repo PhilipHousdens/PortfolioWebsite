@@ -6,8 +6,8 @@ function HeroSection() {
   return (
     <div className="relative flex flex-col items-center justify-center h-full overflow-hidden text-white">
       {/* === Glowing Circles === */}
-      <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] rounded-full border border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
-      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute top-[10%] right-[-2%] w-[400px] h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
 
       {/* === Text === */}
       <div className="w-[50%] mx-auto pl-10">
