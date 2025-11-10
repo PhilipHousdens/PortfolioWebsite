@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './styles.css'
 import HeroSection from './components/HeroSection.jsx';
 import AboutSection from './components/AboutSection.jsx';
+import SkillSection from './components/SkillSection.jsx';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -32,6 +33,11 @@ function App() {
       {/* ===== About Section ===== */}
       <section id="about" className="h-screen snap-start bg-white text-black relative">
         <AboutSection />
+      </section>
+
+      {/* ==== Skills Section ===== */}
+      <section id="skills" className="h-screen snap-start bg-black text-black">
+        <SkillSection />
       </section>
     </div>
   );
