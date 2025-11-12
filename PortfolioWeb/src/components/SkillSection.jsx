@@ -11,7 +11,7 @@ function SkillSection() {
                 {/* Front End Section */}
                 <div>
                     {/* Glowing Cornner */}
-                    <div className="absolute -top-10 -left-14 flex items-center justify-center">
+                    <div className="absolute -top-10 -left-14 flex items-center justify-center animate-pulse">
                         <div className="relative">
                             {/* Horizontal line inner */}
                             <div className="absolute left-0 top-1/2 w-16 h-[2px] bg-white shadow-[0_0_20px_5px_rgba(255,255,255,0.7)] -translate-y-1/2"></div>
@@ -43,7 +43,7 @@ function SkillSection() {
                     </ul>
 
                     {/* Glowing Cornner */}
-                    <div className="absolute -bottom-10 -right-14 flex items-center rotate-180 justify-center">
+                    <div className="absolute -bottom-10 -right-14 flex items-center rotate-180 justify-center animate-pulse">
                         <div className="relative">
                             {/* Horizontal line inner */}
                             <div className="absolute left-0 top-1/2 w-16 h-[2px] bg-white shadow-[0_0_20px_5px_rgba(255,255,255,0.7)] -translate-y-1/2"></div>
