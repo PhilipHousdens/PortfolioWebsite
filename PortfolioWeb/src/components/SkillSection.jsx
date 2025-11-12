@@ -2,13 +2,16 @@ function SkillSection() {
     return (   
         <section className="h-screen flex flex-col justify-center items-center text-white relative overflow-hidden">
         <div className="h-full">
-            <h2 className="text-5xl text-center mt-25 font-bold underline">SKILLS</h2>
+            <div className="flex flex-col justify-center items-center">
+                <span className="text-5xl mt-25 font-bold">SKILLS</span>
+                <div className="w-40 h-[3px] mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
+            </div>
             <br/>
             <div className="mt-10 flex flex-col gap-20 text-2xl ">
                 {/* Front End Section */}
                 <div>
                     <p>Front-End</p>
-                    <ul className="text-lg flex justify-between gap-15 mt-5">
+                    <ul className="text-lg flex justify-between gap-15 mt-5"> 
                         <li className="flex-col justify-center items-center flex"><img src="../../public/HTML5_logo_and_wordmark.svg.png" alt="" className="h-[95px]" />HTML</li>
                         <li className="flex-col justify-center items-center flex"><img src="../../public/CSS3_logo_and_wordmark.svg.png" alt="" className="w-[70px]" />CSS</li>
                         <li className="flex-col justify-center items-center flex"><img src="../../public/Unofficial_JavaScript_logo_2.svg.png" alt="" className="w-[70px]" />JavaScript</li>
