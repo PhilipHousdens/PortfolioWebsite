@@ -53,6 +53,12 @@ app.post("/send-email", async (req, res) => {
         <p><strong>Email:</strong> ${email}</p>
         <p>${message}</p>
       `,
+      priority: "high",
+      headers: {
+            'X-Priority': '1 (Highest)',
+            'X-MSMail-Priority': 'High',
+            Importance: 'High'
+        },
     });
 
     res.json({ success: true, message: "Email sent successfully!" });
