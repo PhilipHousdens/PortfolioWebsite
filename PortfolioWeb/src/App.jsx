@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection.jsx';
 import AboutSection from './components/AboutSection.jsx';
 import SkillSection from './components/SkillSection.jsx';
 import ProjectsSection from './components/ProjectsSection.jsx';
+import ContactSection from './components/ContactSection.jsx';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -44,6 +45,11 @@ function App() {
       {/* ==== Project Section ===== */}
       <section id="projects" className="h-screen snap-start bg-white text-black">
         <ProjectsSection/>
+      </section>
+
+      {/* ==== Contact Section ===== */}
+      <section id="contact" className="h-screen snap-start bg-black text-white">
+        <ContactSection/>
       </section>
     </div>
   );
