@@ -44,7 +44,7 @@ app.post("/send-email", async (req, res) => {
 
     // Send email
     await transporter.sendMail({
-      from: email,
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER, // your inbox
       subject: `Contact form message from ${firstName} ${lastName}`,
       text: message,
