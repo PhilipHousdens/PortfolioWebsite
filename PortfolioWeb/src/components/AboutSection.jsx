@@ -5,10 +5,10 @@ function AboutSection() {
   };
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-black relative overflow-hidden">
+    <section className="h-full flex flex-col justify-center items-center text-black relative overflow-hidden">
         <div className="absolute top-[10%] right-[-2%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse z-0"></div>
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse"></div>
-        <div className="flex justify-center items-start gap-5">
+        <div className="flex justify-center gap-5 items-center ">
             <div className="max-w-3xl">
                 <h2 className="text-5xl font-bold mb-6 underline montserrat-uniquifier ">About Me</h2>
                 <p className="text-lg text-gray-800 leading-relaxed pr-6 instrument-serif-regular">
@@ -24,7 +24,7 @@ function AboutSection() {
                 <img src="/PhilipImg.jpg" alt="Philip Housden" className="w-[570px] rounded-2xl shadow-lg"/>
             </div>
         </div>
-        
+
         <button
           onClick={handleScroll}
           className="mt-24 flex flex-col items-center group focus:outline-none hover:cursor-pointer"

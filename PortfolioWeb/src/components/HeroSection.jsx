@@ -1,3 +1,5 @@
+import { Typewriter } from 'react-simple-typewriter'
+
 function HeroSection() {
   const handleScroll = () => {
     document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
@@ -11,7 +13,17 @@ function HeroSection() {
 
       {/* === Text === */}
       <div className="w-[50%] mx-auto pl-10">
-        <h1 className="text-[40px] font-light mb-6 instrument-serif-regular">Welcome to my portfolio website.<br />Here is where I store all my work</h1>
+        <span className="text-white drop-shadow-[0_0_10px_rgba(96,165,250,0.7)] text-2xl instrument-serif-regular mb-2 block">
+          <Typewriter
+            words={['Welcome to my portfolio website.', 'Explore my projects and skills.', 'Let\'s build something great together!']}
+            loop={0} // Infinite loop
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          /> 
+        </span>
         <p className="text-[6rem] font-light tracking-wide montserrat-uniquifier">PHILIP HOUSDEN</p>
       </div>
       
