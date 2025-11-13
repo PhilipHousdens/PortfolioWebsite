@@ -1,6 +1,43 @@
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
+import { useState } from 'react';
 
 function ContactSection() {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
+    
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('Sending...'); 
+        try {
+            const res = await fetch('http://localhost:8080/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            const data = await res.json();
+            if (data.success) {
+                setStatus("Message sent successfully!");
+                setFormData({ firstName: "", lastName: "", email: "", message: "" });
+            } else {
+                setStatus("Failed to send message.");
+            }
+        } catch (err) {
+            console.error(err);
+            setStatus("Error sending message.");
+        }
+  };
     return (
         <div className="isolate bg-black px-6 h-full py-24 ">
             <div
@@ -18,7 +55,7 @@ function ContactSection() {
             <div className="mx-auto max-w-2xl mt-15 text-center">
                 <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Contact Me</h2>
             </div>
-            <form action="#" method="POST" className="mx-auto mt-10 max-w-xl sm:mt-10">
+            <form action="#" onSubmit={handleSubmit} method="POST" className="mx-auto mt-10 max-w-xl sm:mt-10">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                     <label htmlFor="first-name" className="block text-sm/6 font-semibold text-white">
@@ -27,9 +64,11 @@ function ContactSection() {
                     <div className="mt-2.5">
                     <input
                         id="first-name"
-                        name="first-name"
+                        name="firstName"
                         type="text"
                         autoComplete="given-name"
+                        value={formData.firstName}
+                        onChange={handleChange}
                         className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
                     />
                     </div>
@@ -41,9 +80,11 @@ function ContactSection() {
                     <div className="mt-2.5">
                     <input
                         id="last-name"
-                        name="last-name"
+                        name="lastName"
                         type="text"
                         autoComplete="family-name"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
                     />
                     </div>
@@ -58,6 +99,8 @@ function ContactSection() {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
                     />
                     </div>
@@ -71,8 +114,9 @@ function ContactSection() {
                         id="message"
                         name="message"
                         rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
                         className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
-                        defaultValue={''}
                     />
                     </div>
                 </div>
@@ -105,6 +149,8 @@ function ContactSection() {
                 >
                     Let's talk
                 </button>
+
+                {status && <p className="mt-4 text-center text-sm text-gray-300">{status}</p>}
                 </div>
             </form>
         </div>
