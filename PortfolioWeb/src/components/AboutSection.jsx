@@ -6,8 +6,8 @@ function AboutSection() {
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse"></div>
         <div className="flex justify-center items-start gap-5">
             <div className="max-w-3xl">
-                <h2 className="text-5xl font-bold mb-6 underline">About Me</h2>
-                <p className="text-lg text-gray-800 leading-relaxed pr-6">
+                <h2 className="text-5xl font-bold mb-6 underline montserrat-uniquifier ">About Me</h2>
+                <p className="text-lg text-gray-800 leading-relaxed pr-6 instrument-serif-regular">
                 Hi! I’m Philip Housden, a 4th-year Software Engineering student at Chiang Mai University.
                 I’m passionate about software development, especially frontend web technologies like Vue.js, TailwindCSS, and JavaScript. <br/>
                 <br/>

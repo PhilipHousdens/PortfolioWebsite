@@ -18,7 +18,7 @@ function App() {
   return (
     <div className='h-screen overflow-y-scroll snap-y snap-mandatory bg-black text-white scroll-smooth'>
       {/* ===== Navigation Bar ===== */}
-      <header className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
+      <header className="fixed top-5 left-1/2 -translate-x-1/2 z-50 montserrat-100">
         <ul className="flex justify-between w-[25vw] bg-black/40 py-3 px-6 rounded-full backdrop-blur-md text-white shadow-lg">
           <li><a href="#about" className="hover:text-gray-300">About Me</a></li>
           <li><a href="#skills" className="hover:text-gray-300">Skills</a></li>

@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* === Glowing Line Sweep === */
 @keyframes glowLine {
@@ -18,4 +21,25 @@
 
 .animate-glow-line {
   animation: glowLine 2s linear infinite;
+}
+
+
+/* Fonts */
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-100 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

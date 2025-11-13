@@ -32,7 +32,7 @@ function ProjectsSection() {
                 <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse"></div>
             </div>
             <div className="flex flex-col justify-center items-center pt-5">
-                <span className="text-5xl mt-25 font-bold">Projects</span>
+                <span className="text-5xl mt-25 font-bold montserrat-uniquifier">Projects</span>
                 <div className="w-40 h-[3px] mt-3 bg-black shadow-[0_0_20px_4px_rgba(0,0,0,0.7)]"></div>
             </div>
             {/* === Grid Container === */}

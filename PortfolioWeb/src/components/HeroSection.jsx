@@ -11,8 +11,8 @@ function HeroSection() {
 
       {/* === Text === */}
       <div className="w-[50%] mx-auto pl-10">
-        <h1 className="text-3xl font-light mb-6">Welcome to my portfolio website.<br />Here is where I store all my work</h1>
-        <p className="text-[6rem] font-light tracking-wide">PHILIP HOUSDEN</p>
+        <h1 className="text-[40px] font-light mb-6 instrument-serif-regular">Welcome to my portfolio website.<br />Here is where I store all my work</h1>
+        <p className="text-[6rem] font-light tracking-wide montserrat-uniquifier">PHILIP HOUSDEN</p>
       </div>
       
 
@@ -21,7 +21,7 @@ function HeroSection() {
         onClick={handleScroll}
         className="mt-24 flex flex-col items-center group focus:outline-none hover:cursor-pointer"
       >
-        <span className="text-lg mb-2">About me</span>
+        <span className="text-lg mb-2 montserrat-100">About me</span>
         {/* Glowing line */}
         <div className="w-24 h-[2px] bg-white/40 relative overflow-hidden mb-2">
           <div className="absolute inset-0 bg-white animate-glow-line"></div>
