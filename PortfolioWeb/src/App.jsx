@@ -3,6 +3,7 @@ import './styles.css'
 import HeroSection from './components/HeroSection.jsx';
 import AboutSection from './components/AboutSection.jsx';
 import SkillSection from './components/SkillSection.jsx';
+import ProjectsSection from './components/ProjectsSection.jsx';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -38,6 +39,11 @@ function App() {
       {/* ==== Skills Section ===== */}
       <section id="skills" className="h-screen snap-start bg-black text-black">
         <SkillSection />
+      </section>
+
+      {/* ==== Project Section ===== */}
+      <section id="projects" className="h-screen snap-start bg-white text-black">
+        <ProjectsSection/>
       </section>
     </div>
   );
