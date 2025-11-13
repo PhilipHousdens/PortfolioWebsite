@@ -1,4 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter'
+import { motion } from 'framer-motion'
 
 function HeroSection() {
   const handleScroll = () => {
@@ -24,7 +25,15 @@ function HeroSection() {
             delaySpeed={1000}
           /> 
         </span>
-        <p className="text-[6rem] font-light tracking-wide montserrat-uniquifier">PHILIP HOUSDEN</p>
+        {/* Glowing name reveal */}
+        <motion.p
+          initial={{ filter: "blur(15px)", opacity: 0, scale: 0.95 }}
+          animate={{ filter: "blur(0px)", opacity: 1, scale: 1 }}
+          transition={{ duration: 3, ease: "easeOut", delay: 1 }}
+          className="text-[6rem] font-light tracking-wide montserrat-uniquifier drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+        >
+        PHILIP HOUSDEN
+        </motion.p>
       </div>
       
 
