@@ -43,7 +43,7 @@ function App() {
       </section>
 
       {/* ==== Project Section ===== */}
-      <section id="projects" className="h-screen snap-start bg-white text-black">
+      <section id="projects" className="h-screen snap-start bg-gray-950 text-white">
         <ProjectsSection/>
       </section>
 

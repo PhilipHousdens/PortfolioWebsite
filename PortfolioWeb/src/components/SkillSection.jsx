@@ -1,13 +1,24 @@
+import { motion } from "framer-motion";
+
 function SkillSection() {
     const handleScroll = () => {
         document.querySelector("#projects").scrollIntoView({ behavior: "smooth" });
     };
     return (   
-        <section className="h-screen flex flex-col  items-center text-white relative overflow-hidden montserrat-100 ">
+        <section className="h-full flex flex-col  items-center text-white relative overflow-hidden montserrat-100 ">
             <div className="">
                 <div className="flex flex-col items-center">
-                    <span className="text-5xl mt-25 font-bold montserrat-uniquifier ">SKILLS</span>
-                    <div className="w-40 h-[3px] mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="flex flex-col items-center mt-10"
+                    >
+
+                        <span className="text-5xl mt-25 font-bold montserrat-uniquifier ">SKILLS</span>
+                        <div className="w-40 h-[3px] mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
+                    </motion.div>
                 </div>
                 <br/>
                 <div className="relative mt-10 flex flex-col gap-20 text-2xl ">
@@ -26,24 +37,66 @@ function SkillSection() {
                                 <div className="absolute left-[-20px] top-[-20px] h-30 w-[2px] bg-white shadow-[0_0_20px_5px_rgba(255,255,255,0.7)] -translate-x-1/2"></div>
                             </div>
                         </div>
-                        <p className="montserrat-uniquifier ">Front-End</p>
-                        <ul className="text-lg flex justify-between gap-15 mt-5"> 
-                            <li className="flex-col justify-center items-center flex"><img src="/HTML5_logo_and_wordmark.svg.png" alt="" className="h-[95px]" />HTML</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/CSS3_logo_and_wordmark.svg.png" alt="" className="w-[70px]" />CSS</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/Unofficial_JavaScript_logo_2.svg.png" alt="" className="w-[70px]" />JavaScript</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/React-icon.svg.png" alt="" className="w-[70px]" />React.js</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/Vue.js_Logo_2.svg.png" alt="" className="w-[70px]" />Vue.js</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/Tailwind_CSS_Logo.svg.png" alt="" className="w-[70px]" />TailwindCSS</li>
-                        </ul>
+                        <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        >
+                            <p className="montserrat-uniquifier mb-5">Front-End</p>
+                            <ul className="text-lg flex justify-between gap-10 mt-5">
+                                {[
+                                { src: "/HTML5_logo_and_wordmark.svg.png", name: "HTML" },
+                                { src: "/CSS3_logo_and_wordmark.svg.png", name: "CSS" },
+                                { src: "/Unofficial_JavaScript_logo_2.svg.png", name: "JavaScript" },
+                                { src: "/React-icon.svg.png", name: "React.js" },
+                                { src: "/Vue.js_Logo_2.svg.png", name: "Vue.js" },
+                                { src: "/Tailwind_CSS_Logo.svg.png", name: "TailwindCSS" },
+                                ].map((skill, i) => (
+                                <motion.li
+                                    key={skill.name}
+                                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
+                                >
+                                    <img src={skill.src} alt={skill.name} className="w-[70px] mb-2" />
+                                    {skill.name}
+                                </motion.li>
+                                ))}
+                            </ul>
+                        </motion.div>
                     </div>
                     <div>
-                        <p className="montserrat-uniquifier ">Back-End</p>
-                        <ul className="text-lg flex justify-between gap-15 mt-5">
-                            <li className="flex-col justify-center items-center flex"><img src="/fastapi.svg" alt="" className="w-[70px]" />Node.js</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/icons8-express-js-100.png" alt="" className="w-[70px]" />Express.js</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/icons8-spring-boot-96.png" alt="" className="w-[70px]" />Spring Boot</li>
-                            <li className="flex-col justify-center items-center flex"><img src="/icons8-mongo-db-96.png" alt="" className="w-[70px]" />MongoDB</li>
-                        </ul>
+                        <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                        viewport={{ once: true }}
+                        >
+                            <p className="montserrat-uniquifier mb-5">Back-End</p>
+                            <ul className="text-lg flex justify-between gap-10 mt-5">
+                                {[
+                                { src: "/fastapi.svg", name: "Node.js" },
+                                { src: "/icons8-express-js-100.png", name: "Express.js" },
+                                { src: "/icons8-spring-boot-96.png", name: "Spring Boot" },
+                                { src: "/icons8-mongo-db-96.png", name: "MongoDB" },
+                                ].map((skill, i) => (
+                                <motion.li
+                                    key={skill.name}
+                                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
+                                >
+                                    <img src={skill.src} alt={skill.name} className="w-[70px] mb-2" />
+                                    {skill.name}
+                                </motion.li>
+                                ))}
+                            </ul>
+                        </motion.div>
 
                         {/* Glowing Cornner */}
                         <div className="absolute -bottom-10 -right-14 flex items-center rotate-180 justify-center animate-pulse">
