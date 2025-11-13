@@ -1,4 +1,7 @@
 function ProjectsSection() {
+    const handleScroll = () => {
+        document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+    };
     const projects = [
         {
         title: "Portfolio Website",
@@ -26,13 +29,13 @@ function ProjectsSection() {
         },
     ];
     return (
-        <section className="relative text-black overflow-hidden h-full">
+        <section className="relative text-black overflow-hidden h-full flex justify-center items-center flex-col montserrat-100">
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[-15%] right-[-10%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse"></div>
                 <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse"></div>
             </div>
             <div className="flex flex-col justify-center items-center pt-5">
-                <span className="text-5xl mt-25 font-bold montserrat-uniquifier">Projects</span>
+                <span className="text-5xl mt-20 font-bold montserrat-uniquifier">Projects</span>
                 <div className="w-40 h-[3px] mt-3 bg-black shadow-[0_0_20px_4px_rgba(0,0,0,0.7)]"></div>
             </div>
             {/* === Grid Container === */}
@@ -65,6 +68,28 @@ function ProjectsSection() {
                 </div>
                 ))}
             </div>
+            <button
+            onClick={handleScroll}
+            className="mt-5 flex flex-col items-center group focus:outline-none hover:cursor-pointer"
+            >
+                <span className="text-lg mb-2 montserrat-100">My Skills</span>
+                {/* Glowing line */}
+                <div className="w-24 h-[2px] bg-black/40 relative overflow-hidden mb-2">
+                    <div className="absolute inset-0 bg-black animate-glow-line"></div>
+                </div>
+                {/* Arrow */}
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="black"
+                    className="w-6 h-6 animate-bounce"
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            
         </section>
     );
 }

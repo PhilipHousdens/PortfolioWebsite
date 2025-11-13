@@ -1,5 +1,9 @@
 
 function AboutSection() {
+  const handleScroll = () => {
+    document.querySelector("#skills").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="h-screen flex flex-col justify-center items-center text-black relative overflow-hidden">
         <div className="absolute top-[10%] right-[-2%] w-[400px] h-[400px] rounded-full border-2 border-black shadow-[0_0_120px_40px_rgba(0,0,0,0.25)] animate-pulse z-0"></div>
@@ -20,6 +24,28 @@ function AboutSection() {
                 <img src="/PhilipImg.jpg" alt="Philip Housden" className="w-[570px] rounded-2xl shadow-lg"/>
             </div>
         </div>
+        
+        <button
+          onClick={handleScroll}
+          className="mt-24 flex flex-col items-center group focus:outline-none hover:cursor-pointer"
+        >
+          <span className="text-lg mb-2 montserrat-100">My Skills</span>
+          {/* Glowing line */}
+          <div className="w-24 h-[2px] bg-black/40 relative overflow-hidden mb-2">
+            <div className="absolute inset-0 bg-black animate-glow-line"></div>
+          </div>
+          {/* Arrow */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="black"
+            className="w-6 h-6 animate-bounce"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
     </section>
   );
 }
