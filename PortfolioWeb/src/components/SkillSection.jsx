@@ -16,12 +16,12 @@ function SkillSection() {
                         className="flex flex-col items-center mt-10"
                     >
 
-                        <span className="text-5xl mt-25 font-bold montserrat-uniquifier ">SKILLS</span>
+                        <span className="text-5xl mt-10 font-bold montserrat-uniquifier ">SKILLS</span>
                         <div className="w-40 h-[3px] mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
                     </motion.div>
                 </div>
                 <br/>
-                <div className="relative mt-10 flex flex-col gap-20 text-2xl ">
+                <div className="relative mt-10 flex flex-col gap-10 text-2xl ">
                     {/* Front End Section */}
                     <div>
                         {/* Glowing Cornner */}
@@ -43,8 +43,8 @@ function SkillSection() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
                         >
-                            <p className="montserrat-uniquifier mb-5">Front-End</p>
-                            <ul className="text-lg flex justify-between gap-10 mt-5">
+                            <p className="montserrat-uniquifier mb-3">Front-End</p>
+                            <ul className="text-lg flex justify-between gap-10">
                                 {[
                                 { src: "/HTML5_logo_and_wordmark.svg.png", name: "HTML" },
                                 { src: "/CSS3_logo_and_wordmark.svg.png", name: "CSS" },
@@ -61,7 +61,7 @@ function SkillSection() {
                                     viewport={{ once: true }}
                                     className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
                                 >
-                                    <img src={skill.src} alt={skill.name} className="w-[70px] mb-2" />
+                                    <img src={skill.src} alt={skill.name} className="w-[50px] mb-2" />
                                     {skill.name}
                                 </motion.li>
                                 ))}
@@ -75,10 +75,10 @@ function SkillSection() {
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                         viewport={{ once: true }}
                         >
-                            <p className="montserrat-uniquifier mb-5">Back-End</p>
-                            <ul className="text-lg flex justify-between gap-10 mt-5">
+                            <p className="montserrat-uniquifier mb-3">Back-End</p>
+                            <ul className="text-lg flex justify-between gap-10">
                                 {[
-                                { src: "/fastapi.svg", name: "Node.js" },
+                                { src: "/fastapi.svg", name: "FastAPI" },
                                 { src: "/icons8-express-js-100.png", name: "Express.js" },
                                 { src: "/icons8-spring-boot-96.png", name: "Spring Boot" },
                                 { src: "/icons8-mongo-db-96.png", name: "MongoDB" },
@@ -91,7 +91,38 @@ function SkillSection() {
                                     viewport={{ once: true }}
                                     className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
                                 >
-                                    <img src={skill.src} alt={skill.name} className="w-[70px] mb-2" />
+                                    <img src={skill.src} alt={skill.name} className="w-[50px] mb-2" />
+                                    {skill.name}
+                                </motion.li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    </div>
+                    {/* Back End Section */}
+                    <div>
+                        <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                        viewport={{ once: true }}
+                        >
+                            <p className="montserrat-uniquifier mb-3">Languages</p>
+                            <ul className="text-lg flex justify-between gap-10">
+                                {[
+                                { src: "/Unofficial_JavaScript_logo_2.svg.png", name: "JavaScript" },
+                                { src: "/Typescript_logo_2020.svg.png", name: "TypeScript" },
+                                { src: "/226777.png", name: "Java" },
+                                { src: "/python-logo.png", name: "Python" },
+                                ].map((skill, i) => (
+                                <motion.li
+                                    key={skill.name}
+                                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
+                                >
+                                    <img src={skill.src} alt={skill.name} className="w-[50px] mb-2" />
                                     {skill.name}
                                 </motion.li>
                                 ))}

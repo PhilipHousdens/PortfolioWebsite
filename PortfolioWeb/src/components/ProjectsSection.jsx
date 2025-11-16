@@ -6,28 +6,10 @@ function ProjectsSection() {
     };
     const projects = [
         {
-        title: "Portfolio Website",
-        tech: "React, TailwindCSS",
-        img: "/projects/portfolio.jpg",
-        link: "https://your-portfolio-link.com",
-        },
-        {
-        title: "E-Commerce App",
+        title: "Biker SKY",
         tech: "Vue.js, Node.js, MongoDB",
-        img: "/projects/ecommerce.jpg",
-        link: "https://your-ecommerce-link.com",
-        },
-        {
-        title: "AI Image Classifier",
-        tech: "Python, TensorFlow",
-        img: "/projects/ai-classifier.jpg",
-        link: "https://your-ai-project.com",
-        },
-        {
-        title: "Weather Dashboard",
-        tech: "React, OpenWeather API",
-        img: "/projects/weather.jpg",
-        link: "https://your-weather-link.com",
+        img: "/projects/bikersky.png",
+        link: "https://bike-sky.vercel.app",
         },
     ];
     return (
