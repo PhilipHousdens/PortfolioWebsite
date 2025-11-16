@@ -7,14 +7,6 @@ import ProjectsSection from './components/ProjectsSection.jsx';
 import ContactSection from './components/ContactSection.jsx';
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:8080/api/hello")
-      .then(res => res.json())
-      .then(data => setMessage(data.message));
-  }, []);
-
   return (
     <div className='h-screen overflow-y-scroll snap-y snap-mandatory bg-black text-white scroll-smooth'>
       {/* ===== Navigation Bar ===== */}
