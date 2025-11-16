@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 dotenv.config();
 const app = express();
@@ -13,6 +14,9 @@ app.use(cors({
   methods: ["GET", "POST"],
 }));
 app.use(express.json());
+
+// Resend client setup
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Simple test route
 app.get("/", (req, res) => {
@@ -36,17 +40,8 @@ app.post("/send-email", async (req, res) => {
   }
 
   try {
-    // Create a transporter
-    const transporter = nodemailer.createTransport({
-      service: "gmail", // or 'hotmail', 'outlook', etc.
-      auth: {
-        user: process.env.EMAIL_USER, // your Gmail address
-        pass: process.env.EMAIL_PASS, // your Gmail App Password
-      },
-    });
-
     // Send email
-    await transporter.sendMail({
+    await resend.emails.send({
       from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER, // your inbox
       subject: `Contact form message from ${firstName} ${lastName}`,
