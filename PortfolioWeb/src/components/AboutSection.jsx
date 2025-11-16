@@ -20,7 +20,7 @@ function AboutSection() {
           whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="w-56 h-56 rounded-full object-cover shadow-[0_0_40px_rgba(255,255,255,0.2)] mb-10"
+          className="w-50 h-50 rounded-full object-cover shadow-[0_0_40px_rgba(255,255,255,0.2)] mb-10"
         />
 
       {/* === Title === */}
@@ -41,7 +41,8 @@ function AboutSection() {
           {[
             "Hi! I’m Philip Housden, a 4th-year Software Engineering student at Chiang Mai University. I’m passionate about software development, especially designing and building web applications.",
             "I enjoy designing and developing modern, responsive websites that combine clean design with solid functionality. I’m constantly learning new tools and frameworks to improve both user experience and development efficiency.",
-            "Currently, I’m working on freelance projects to gain hands-on experience and collaborate with clients who want to bring their ideas to life. My goal is to create software that’s not only beautiful but also meaningful and impactful."
+            "Currently, I’m working on freelance projects to gain hands-on experience and collaborate with clients who want to bring their ideas to life. My goal is to create software that’s not only beautiful but also meaningful and impactful.",
+            <a key="github" href="https://github.com/PhilipHousdens" className="underline text-blue-400">Visit my GitHub</a>
           ].map((text, i) => (
             <motion.p
               key={i}
