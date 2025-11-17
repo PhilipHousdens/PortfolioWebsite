@@ -7,11 +7,11 @@ function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex h-full flex-col overflow-hidden justify-center items-center bg-gray-950 text-white px-8 py-24"
+      className="relative flex h-full flex-col overflow-hidden justify-center items-center bg-gray-950 text-white px-8 py-24 md:py-30"
     >
       {/* === Background Glow === */}
-      <div className="absolute top-[10%] right-[-2%] w-[400px] h-[400px] rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
-      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute top-[10%] right-[-2%] w-[400px] h-[400px] md:w-[300px] md:h-[300px] rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] md:w-[300px] md:h-[300px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
       {/* === Profile Picture === */}
         <motion.img
           src="/PhilipImg.jpg"
@@ -20,7 +20,7 @@ function AboutSection() {
           whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="w-50 h-50 rounded-full object-cover shadow-[0_0_40px_rgba(255,255,255,0.2)] mb-10"
+          className="w-50 h-50 md:w-30 md:h-30 md:mt-10 rounded-full object-cover shadow-[0_0_40px_rgba(255,255,255,0.2)] mb-10 md:mb-5"
         />
 
       {/* === Title === */}
@@ -29,15 +29,15 @@ function AboutSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-4xl font-semibold mb-12 tracking-wide"
+        className="text-4xl md:text-2xl font-semibold mb-12 md:mb-5 tracking-wide"
       >
         About Me
       </motion.h2>
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 justify-center items-center">
+      <div className="max-w-5xl md:max-w-6xl mx-auto flex flex-col md:flex-row gap-10 justify-center items-center">
 
         {/* === About Text === */}
-        <div className="md:w-2/3 space-y-6">
+        <div className="md:w-2/3 space-y-6 md:space-y-3">
           {[
             "Hi! I’m Philip Housden, a 4th-year Software Engineering student at Chiang Mai University. I’m passionate about software development, especially designing and building web applications.",
             "I enjoy designing and developing modern, responsive websites that combine clean design with solid functionality. I’m constantly learning new tools and frameworks to improve both user experience and development efficiency.",
