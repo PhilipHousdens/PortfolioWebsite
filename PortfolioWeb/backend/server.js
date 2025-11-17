@@ -9,10 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Middleware 
-app.use(cors({
-  origin: ["https://portfolio-website-eta-ten-50.vercel.app"],
-  methods: ["GET", "POST"],
-}));
+app.use(cors());
 app.use(express.json());
 
 // Resend client setup
@@ -42,7 +39,7 @@ app.post("/send-email", async (req, res) => {
   try {
     // Send email
     await resend.emails.send({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      from: "Portfolio Contact <onboarding@resend.dev>",
       to: process.env.EMAIL_USER, // your inbox
       subject: `Contact form message from ${firstName} ${lastName}`,
       text: message,

@@ -19,7 +19,7 @@ function ContactSection() {
         e.preventDefault();
         setStatus('Sending...'); 
         try {
-            const res = await fetch('https://philiphportfoliowebsite.onrender.com/send-email', {
+            const res = await fetch('http://localhost:8080/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
