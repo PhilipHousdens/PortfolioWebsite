@@ -39,7 +39,7 @@ function ContactSection() {
         }
   };
     return (
-        <div className="isolate bg-black px-6 h-full py-24 ">
+        <div className="isolate bg-black px-6 h-full py-24 md:py-10 ">
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"

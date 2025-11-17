@@ -15,8 +15,8 @@ function ProjectsSection() {
     return (
         <section className="relative overflow-hidden h-full flex justify-center items-center flex-col montserrat-100">
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-[-15%] right-[-10%] w-[400px] h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.25)] animate-pulse animate-float"></div>
-                <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.25)] animate-pulse animate-float"></div>
+                <div className="absolute top-[-15%] right-[-10%] w-[400px] h-[400px] md:w-[300px]  md:h-[300px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.25)] animate-pulse animate-float"></div>
+                <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] md:w-[300px]  md:h-[300px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.25)] animate-pulse animate-float"></div>
             </div>
             <div className="flex flex-col justify-center items-center pt-5">
                 <motion.div
@@ -27,12 +27,12 @@ function ProjectsSection() {
                     className="flex flex-col items-center mt-10"
                 >
 
-                        <span className="text-5xl font-bold montserrat-uniquifier ">Projects</span>
-                        <div className="w-50 h-[3px] mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
+                        <span className="text-5xl md:text-2xl font-bold montserrat-uniquifier ">Projects</span>
+                        <div className="w-50 h-[3px] md:w-25 mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
                 </motion.div>
             </div>
             {/* === Grid Container === */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full mx-auto mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full p-5 mx-auto mt-10">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
