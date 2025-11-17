@@ -16,12 +16,12 @@ function SkillSection() {
                         className="flex flex-col items-center mt-10"
                     >
 
-                        <span className="text-5xl mt-10 font-bold md:text-2xl montserrat-uniquifier ">SKILLS</span>
-                        <div className="w-40 h-[3px] md:w-20 mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
+                        <span className="text-lgl mt-10 font-bold md:text-2xl montserrat-uniquifier ">SKILLS</span>
+                        <div className="w-15 h-[1.5px] md:w-20 md:h-[2px] mt-1 bg-white shadow-[0_0_20px_4px_rgba(255,255,255,0.7)]"></div>
                     </motion.div>
                 </div>
                 <br/>
-                <div className="relative mt-10 md:mt-3 flex flex-col gap-10 text-2xl ">
+                <div className="relative mt-2 md:mt-3 flex flex-col gap-10 px-10 text-2xl ">
                     {/* Front End Section */}
                     <div>
                         {/* Glowing Cornner */}
@@ -43,9 +43,10 @@ function SkillSection() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
                         >
-                            <p className="montserrat-uniquifier md:text-lg mb-3 md:mb-0">Front-End</p>
+                            <p className="montserrat-uniquifier text-base md:text-lg mb-3 md:mb-0">Front-End</p>
                             <ul className="
-                                grid grid-cols-6
+                                grid grid-cols-3
+                                md:grid-cols-6
                                 gap-8 place-items-center
                                 text-lg md:text-sm
                             ">
@@ -63,9 +64,9 @@ function SkillSection() {
                                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                     transition={{ duration: 0.4, delay: i * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
+                                    className="flex flex-col justify-center items-center text-sm hover:scale-110 transition-transform duration-300"
                                 >
-                                    <img src={skill.src} alt={skill.name} className="w-16 sm:w-10 md:w-12 md:mb-1 mb-2" />
+                                    <img src={skill.src} alt={skill.name} className="w-6 sm:w-10 md:w-12 md:mb-1 mb-2" />
                                     {skill.name}
                                 </motion.li>
                                 ))}
@@ -79,9 +80,10 @@ function SkillSection() {
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                         viewport={{ once: true }}
                         >  
-                            <p className="montserrat-uniquifier md:text-lg mb-3 md:mb-1">Back-End</p>
+                            <p className="montserrat-uniquifier text-base md:text-lg mb-3 md:mb-1">Back-End</p>
                             <ul className="
-                                grid grid-cols-4
+                                grid grid-cols-3
+                                md:grid-cols-6
                                 gap-8 place-items-center
                                 text-lg md:text-sm
                             ">
@@ -97,9 +99,9 @@ function SkillSection() {
                                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                     transition={{ duration: 0.4, delay: i * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
+                                    className="flex flex-col justify-center items-center text-sm hover:scale-110 transition-transform duration-300"
                                 >
-                                    <img src={skill.src} alt={skill.name} className="w-16 sm:w-10 md:w-12 md:mb-1 mb-2" />
+                                    <img src={skill.src} alt={skill.name} className="w-6 sm:w-10 md:w-12 md:mb-1 mb-2" />
                                     {skill.name}
                                 </motion.li>
                                 ))}
@@ -114,9 +116,10 @@ function SkillSection() {
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                         viewport={{ once: true }}
                         >
-                            <p className="montserrat-uniquifier md:text-lg mb-3 md:mb-1">Languages</p>
+                            <p className="montserrat-uniquifier text-base md:text-lg mb-3 md:mb-1">Languages</p>
                             <ul className="
-                                grid grid-cols-4
+                                grid grid-cols-3
+                                md:grid-cols-6
                                 gap-8 place-items-center
                                 text-lg md:text-sm
                             ">
@@ -132,9 +135,9 @@ function SkillSection() {
                                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                     transition={{ duration: 0.4, delay: i * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="flex flex-col justify-center items-center hover:scale-110 transition-transform duration-300"
+                                    className="flex flex-col justify-center items-center text-sm hover:scale-110 transition-transform duration-300"
                                 >
-                                    <img src={skill.src} alt={skill.name} className="w-16 sm:w-10 md:w-12 md:mb-1 mb-2" />
+                                    <img src={skill.src} alt={skill.name} className="w-6 sm:w-10 md:w-12 md:mb-1 mb-2" />
                                     {skill.name}
                                 </motion.li>
                                 ))}
@@ -159,7 +162,7 @@ function SkillSection() {
             </div>
             <button
                 onClick={handleScroll}
-                className=" mt-24 flex flex-col items-center group focus:outline-none hover:cursor-pointer md:hidden"
+                className=" mt-24 flex flex-col items-center group focus:outline-none hover:cursor-pointer sm:hidden md:hidden"
             >
                 <span className="text-lg mb-2 montserrat-100">Projects</span>
                 {/* Glowing line */}

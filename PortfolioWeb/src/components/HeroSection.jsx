@@ -9,8 +9,8 @@ function HeroSection() {
   return (
     <div className="relative flex flex-col items-center justify-center h-full overflow-hidden text-white">
       {/* === Glowing Circles === */}
-      <div className="absolute top-[10%] right-[-2%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]  rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
-      <div className="absolute bottom-[-5%] left-[-10%] lg:bottom-[-15%] lg:left-[-10%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute top-[10%] right-[-2%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]  rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse animate-float"></div>
+      <div className="absolute bottom-[-5%] left-[-10%] lg:bottom-[-15%] lg:left-[-10%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse animate-float"></div>
 
       {/* === Text === */}
       <div className="w-full lg:w-[50%] mx-auto px-10 lg:pl-10">

@@ -32,7 +32,7 @@ function ProjectsSection() {
                 </motion.div>
             </div>
             {/* === Grid Container === */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full p-5 mx-auto mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-10 max-w-6xl w-full p-5 mx-auto mt-10">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}

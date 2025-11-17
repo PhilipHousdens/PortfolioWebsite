@@ -81,3 +81,22 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.skill-float {
+    transition: animation-duration 0.3s ease;
+}
+
+.skill-float:hover {
+    animation-duration: 10s; /* slows down on hover */
+}
+
+.skill-float:active {
+    animation-duration: 10s; /* mobile long-press */
+}
