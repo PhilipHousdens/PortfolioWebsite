@@ -9,12 +9,12 @@ function HeroSection() {
   return (
     <div className="relative flex flex-col items-center justify-center h-full overflow-hidden text-white">
       {/* === Glowing Circles === */}
-      <div className="absolute top-[10%] right-[-2%] w-[400px] md:w-[300px] h-[400px] md:h-[300px]  rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
-      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] md:w-[300px] h-[400px] md:h-[300px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute top-[10%] right-[-2%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]  rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute bottom-[-5%] left-[-10%] lg:bottom-[-15%] lg:left-[-10%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
 
       {/* === Text === */}
-      <div className="w-[50%] mx-auto pl-10">
-        <span className="text-white drop-shadow-[0_0_10px_rgba(96,165,250,0.7)] text-2xl instrument-serif-regular mb-2 block">
+      <div className="w-full lg:w-[50%] mx-auto px-10 lg:pl-10">
+        <span className="text-white drop-shadow-[0_0_10px_rgba(96,165,250,0.7)] text-xl lg:text-2xl instrument-serif-regular mb-2 block">
           <Typewriter
             words={['Welcome to my portfolio website.', 'Explore my projects and skills.', 'Let\'s build something great together!']}
             loop={0} // Infinite loop
@@ -30,7 +30,7 @@ function HeroSection() {
           initial={{ filter: "blur(15px)", opacity: 0, scale: 0.95 }}
           animate={{ filter: "blur(0px)", opacity: 1, scale: 1 }}
           transition={{ duration: 3, ease: "easeOut", delay: 1 }}
-          className="text-[6rem] md:text-[78px] font-light tracking-wide montserrat-uniquifier drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+          className="text-3xl md:text-[78px] lg:text-[6rem] font-light tracking-wide montserrat-uniquifier drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
         >
         PHILIP HOUSDEN
         </motion.p>
