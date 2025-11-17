@@ -9,8 +9,8 @@ function HeroSection() {
   return (
     <div className="relative flex flex-col items-center justify-center h-full overflow-hidden text-white">
       {/* === Glowing Circles === */}
-      <div className="absolute top-[10%] right-[-2%] w-[400px] h-[400px] rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
-      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute top-[10%] right-[-2%] w-[400px] md:w-[300px] h-[400px] md:h-[300px]  rounded-full border-2 border-white  shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
+      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] md:w-[300px] h-[400px] md:h-[300px] rounded-full border-2 border-white shadow-[0_0_120px_40px_rgba(255,255,255,0.15)] animate-pulse"></div>
 
       {/* === Text === */}
       <div className="w-[50%] mx-auto pl-10">
@@ -30,7 +30,7 @@ function HeroSection() {
           initial={{ filter: "blur(15px)", opacity: 0, scale: 0.95 }}
           animate={{ filter: "blur(0px)", opacity: 1, scale: 1 }}
           transition={{ duration: 3, ease: "easeOut", delay: 1 }}
-          className="text-[6rem] font-light tracking-wide montserrat-uniquifier drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+          className="text-[6rem] md:text-[78px] font-light tracking-wide montserrat-uniquifier drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
         >
         PHILIP HOUSDEN
         </motion.p>
